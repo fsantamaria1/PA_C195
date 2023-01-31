@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CustomersController">
+    <children>
+        <TableView fx:id="CustomerTable" layoutX="25.0" layoutY="50.0" prefHeight="350.0" prefWidth="1150.0">
+            <columns>
+                <TableColumn fx:id="Customer_ID" text="Customer ID" />
+                <TableColumn fx:id="Customer_Name" prefWidth="120.0" text="Customer Name" />
+                <TableColumn fx:id="Address" prefWidth="110.0" text="Address" />
+                <TableColumn fx:id="Postal_Code" text="Postal Code" />
+                <TableColumn fx:id="Phone_Number" prefWidth="140.0" text="Phone Number" />
+                <TableColumn fx:id="Create_Date" text="Create Date" />
+                <TableColumn fx:id="Create_By" prefWidth="100.0" text="Created By" />
+                <TableColumn fx:id="Last_Update" text="Last Update" />
+                <TableColumn fx:id="Last_Updated_By" prefWidth="160.0" text="Last Updated By" />
+                <TableColumn fx:id="Division_ID" text="Division_ID" />
+            </columns>
+        </TableView>
+        <AnchorPane layoutX="470.0" layoutY="430.0" prefHeight="30.0" prefWidth="255.0">
+            <children>
+                <HBox prefHeight="30.0" prefWidth="255.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="30.0" prefWidth="80.0" text="Add" />
+                        <Button fx:id="modifyButton" mnemonicParsing="false" onAction="#onActionModifyCustomer" prefHeight="30.0" prefWidth="80.0" text="Modify" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="30.0" prefWidth="80.0" text="Delete" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <Button fx:id="mainMenuButton" layoutX="1075.0" layoutY="430.0" mnemonicParsing="false" onAction="#onActionMainMenu" prefHeight="30.0" prefWidth="100.0" text="Main Menu" />
+    </children>
+</AnchorPane>

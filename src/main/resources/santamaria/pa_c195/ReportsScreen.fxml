@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReportsController">
+   <children>
+      <AnchorPane layoutX="60.0" layoutY="37.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="typeAndMonthLabel" text="Appointments by type and month:">
+                     <HBox.margin>
+                        <Insets right="10.0" top="35.0" />
+                     </HBox.margin>
+                  </Label>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="monthLabel" text="Month" textAlignment="CENTER" GridPane.halignment="CENTER" />
+                        <Label fx:id="typeLabel" text="Type" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Label fx:id="totalLabel1" text="Total" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <ComboBox fx:id="monthsComboBox" onAction="#onActonMonthCombo" prefWidth="150.0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="typeComboBox" onAction="#onActionTypeCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="appointmentsTotalLabel" prefWidth="50.0" style="-fx-border-color: Black;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="25.0" />
+                           </GridPane.margin></Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="886.0" layoutY="67.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="contactLabel" prefHeight="30.0" prefWidth="60.0" text="Contact:  " />
+                  <ComboBox fx:id="contactComboBox" onAction="#onActionContactCombo" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="appointmentTableView" layoutX="50.0" layoutY="125.0" prefHeight="300.0" prefWidth="1100.0">
+         <columns>
+            <TableColumn fx:id="appointmentId" prefWidth="120.0" text="Appointment ID" />
+            <TableColumn fx:id="appmntTitle" prefWidth="150.0" text="Title" />
+            <TableColumn fx:id="appmntDesc" prefWidth="150.0" text="Description" />
+            <TableColumn fx:id="appmntLocation" text="Location" />
+            <TableColumn fx:id="appmntContact" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="appmntType" prefWidth="110.0" text="Type" />
+            <TableColumn fx:id="appmntStartDateTime" prefWidth="110.0" text="Start" />
+            <TableColumn fx:id="appmntEndDateTime" prefWidth="110.0" text="End" />
+            <TableColumn fx:id="customerId" prefWidth="90.0" text="Customer ID" />
+            <TableColumn fx:id="userId" prefWidth="100.0" text="User ID" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="50.0" layoutY="445.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label fx:id="customersByCountryLabel" text="Customers by country:">
+                     <HBox.margin>
+                        <Insets right="10.0" top="35.0" />
+                     </HBox.margin>
+                  </Label>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="countryLabel" text="Country" textAlignment="CENTER" GridPane.halignment="CENTER" />
+                        <Label fx:id="totalLabel2" text="Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <ComboBox fx:id="countryComboBox" onAction="#onActionCountryCombo" prefWidth="150.0" GridPane.rowIndex="1" />
+                        <Label fx:id="customersTotalLabel" prefWidth="50.0" style="-fx-border-color: Black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="25.0" />
+                           </GridPane.margin></Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Button fx:id="mainMenuButton" layoutX="1030.0" layoutY="460.0" mnemonicParsing="false" onAction="#onActionMainMenu" prefHeight="30.0" prefWidth="120.0" text="Main Menu" />
+   </children>
+   <padding>
+      <Insets left="15.0" />
+   </padding>
+</AnchorPane>
