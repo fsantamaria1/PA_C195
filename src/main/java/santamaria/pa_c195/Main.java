@@ -53,6 +53,7 @@ public class Main extends Application {
      * It opens the database connection, launches the app, and closes the database connection when the app is closed.
      * @param args the arguments required by the method.
      */
+//    The Javadoc is located at: santamaria/pa_c195/JavaDocs
     public static void main(String[] args) {
 //        Open DB Connection
         JDBC.openConnection();
